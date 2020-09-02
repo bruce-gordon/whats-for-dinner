@@ -12,14 +12,14 @@ body {
   background-image: url("assets/burger-friends.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+  margin: 0px;
 }
 
 .header {
-  padding: 20px;
+  padding: 15px;
   margin: 0px;
   display: flex;
   flex-direction: row;
-  border: solid black 1px;
   justify-content: space-between;
   background-color: #0fb9b1;
   align-items: center;
@@ -40,27 +40,48 @@ body {
   margin: 50px 0px;
   display: flex;
   justify-content: space-around;
-  border: solid black 1px;
 }
 
-div {
+/* div {
   border: solid black 1px;
   background-color: rgba(225, 225, 225, .9);
   padding: 30px;
   width: 430px;
   height: 300px;
   display: flex;
-}
+} */
 
 div:nth-child(1) {
+  background-color: rgba(225, 225, 225, .9);
+  padding: 35px;
+  width: 430px;
+  height: 300px;
+  display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+
 
 }
 div:nth-child(2) {
+  background-color: rgba(225, 225, 225, .9);
+  padding: 35px;
+  width: 430px;
+  height: 300px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
+input {
+  margin: 10px;
+  padding: 8px 40px;
+  background-color: #0fb9b1;
+  border: none;
+  font-size: 12px;
+
+}
 
 #pot {
   height: 150px;
