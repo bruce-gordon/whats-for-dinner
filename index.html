@@ -12,21 +12,24 @@
       <div>
         <h1>What are you looking for?</h1>
         <form class="meal-form">
-          <input type="radio" id="side" name="dish" value="side">
+          <input type="radio" id="sides" name="dish" value="sides">
           <label for="side">Side</label><br>
-          <input type="radio" id="main-dish" name="dish" value="main-dish">
+          <input type="radio" id="mains" name="dish" value="mains">
           <label for="side">Main Dish</label><br>
-          <input type="radio" id="dessert" name="dish" value="dessert">
+          <input type="radio" id="desserts" name="dish" value="desserts">
           <label for="side">Dessert</label><br>
           <input type="radio" id="entire-meal" name="dish" value="entire-meal">
           <label for="side">Entire Meal</label><br>
-          <input type="submit" value="LET'S COOK!">
+          <button class="lets-cook-button">LET'S COOK!</button>
         </form>
       </div>
       <div>
         <img id="pot" src="assets/cookpot.svg">
+        <p class ="you-should-make">You should make:</p>
+        <h1 class="output">Cake!</h1>
       </div>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script src="data.js"></script>
 </html>
