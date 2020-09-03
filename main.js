@@ -42,13 +42,17 @@ var output = document.querySelector(".output");
 var letsCookButton = document.querySelector(".lets-cook-button");
 var cookPot = document.querySelector("#pot");
 var youShouldMake = document.querySelector(".you-should-make");
-console.log(document.getElementsByName("dish"));
 
 letsCookButton.addEventListener("click", findRadioInput);
 
 function getRandom(list) {
   var index = Math.floor(Math.random() * meals[list].length);
   output.innerText = `${meals[list][index]}!`;
+}
+
+function changeView() {
+  cookPot.classList.add("hidden");
+  youShouldMake.classList.remove("hidden");
 }
 
 function findRadioInput() {
@@ -58,7 +62,6 @@ function findRadioInput() {
     if (dishes[i].checked === true) {
       getRandom(dishes[i].value);
     }
-  } cookPot.classList.add("hidden");
-    youShouldMake.classList.remove("hidden");
-
+  }
+  changeView();
 }
