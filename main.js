@@ -38,43 +38,17 @@ var meals = {
   ]
 }
 
-// var mains = [
-//
-// ]
-//
-// var desserts = [
-//   "Ice cream",
-//   "Lemon bars",
-//   "Apple pie",
-//   "Mochi",
-//   "Flan",
-//   "Canoli",
-//   "Carrot cake",
-//   "Cheesecake",
-//   "Baklava",
-//   "Macarons"
-// ]
-//
-// var sides = [
-//   "Mac and cheese",
-//   "Mashed potatoes",
-//   "French fries",
-//   "Spring rolls",
-//   "Hot wings",
-//   "Garlic bread",
-//   "Chef sald",
-//   "Hush puppies",
-//   "Fried rice",
-//   "Coleslaw"
-// ]
+var output = document.querySelector(".output");
 var letsCookButton = document.querySelector(".lets-cook-button");
+var cookPot = document.querySelector("#pot");
+var youShouldMake = document.querySelector(".you-should-make");
 console.log(document.getElementsByName("dish"));
 
 letsCookButton.addEventListener("click", findRadioInput);
 
 function getRandom(list) {
   var index = Math.floor(Math.random() * meals[list].length);
-    console.log(meals[list][index]);
+  output.innerText = `${meals[list][index]}!`;
 }
 
 function findRadioInput() {
@@ -84,5 +58,7 @@ function findRadioInput() {
     if (dishes[i].checked === true) {
       getRandom(dishes[i].value);
     }
-  }
+  } cookPot.classList.add("hidden");
+    youShouldMake.classList.remove("hidden");
+
 }

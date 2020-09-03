@@ -50,6 +50,9 @@ body {
   height: 300px;
   display: flex;
 } */
+.hidden {
+  display: none;
+}
 
 div:nth-child(1) {
   background-color: rgba(225, 225, 225, .9);
@@ -70,6 +73,7 @@ div:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 input {
@@ -92,10 +96,12 @@ input {
 .you-should-make {
   font-weight: 700;
   font-style: italic;
+  margin: 5px;
 }
 
 .output {
   font-size: 36px;
+  margin: 0px;
 }
 
 #pot {
