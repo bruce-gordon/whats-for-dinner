@@ -102,6 +102,7 @@ input {
 .output {
   font-size: 36px;
   margin: 0px;
+  text-align: center;
 }
 
 #pot {
