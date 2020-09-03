@@ -50,6 +50,9 @@ body {
   height: 300px;
   display: flex;
 } */
+.hidden {
+  display: none;
+}
 
 div:nth-child(1) {
   background-color: rgba(225, 225, 225, .9);
@@ -60,10 +63,8 @@ div:nth-child(1) {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-
-
-
 }
+
 div:nth-child(2) {
   background-color: rgba(225, 225, 225, .9);
   padding: 35px;
@@ -72,6 +73,7 @@ div:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 input {
@@ -80,7 +82,26 @@ input {
   background-color: #0fb9b1;
   border: none;
   font-size: 12px;
+}
 
+.lets-cook-button {
+  margin: 10px;
+  width: 38%;
+  padding: 8px 40px;
+  background-color: #0fb9b1;
+  border: none;
+  font-size: 12px;
+}
+
+.you-should-make {
+  font-weight: 700;
+  font-style: italic;
+  margin: 5px;
+}
+
+.output {
+  font-size: 36px;
+  margin: 0px;
 }
 
 #pot {
