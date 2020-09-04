@@ -42,8 +42,27 @@ var output = document.querySelector(".output");
 var letsCookButton = document.querySelector(".lets-cook-button");
 var cookPot = document.querySelector("#pot");
 var youShouldMake = document.querySelector(".you-should-make");
+var clearButton = document.querySelector(".clear");
+letsCookButton.disabled = true;
 
-letsCookButton.addEventListener("click", findRadioInput);
+letsCookButton.addEventListener("click", displayMealIdea);
+
+clearButton.addEventListener("click", clearFoodIdea);
+
+function activateCook() {
+  letsCookButton.disabled = false;
+}
+
+function clearFoodIdea() {
+  clearButton.classList.add("hidden");
+  youShouldMake.classList.add("hidden");
+  output.classList.add("hidden");
+  cookPot.classList.remove("hidden");
+}
+
+function showButton() {
+  clearButton.classList.remove("hidden");
+}
 
 function insertText(text) {
   output.innerText = text;
@@ -58,6 +77,7 @@ function getRandom(list) {
 function changeView() {
   cookPot.classList.add("hidden");
   youShouldMake.classList.remove("hidden");
+  output.classList.remove("hidden");
 }
 
 function randomEntireMeal() {
@@ -68,7 +88,7 @@ function randomEntireMeal() {
   insertText(text);
 }
 
-function findRadioInput() {
+function displayMealIdea() {
   event.preventDefault();
   var dishes = document.getElementsByName("dish");
   for (var i = 3; i >= 0; i--) {
@@ -79,4 +99,5 @@ function findRadioInput() {
     }
   }
   changeView();
+  showButton();
 }

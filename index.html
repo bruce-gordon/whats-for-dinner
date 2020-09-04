@@ -9,24 +9,31 @@
       <button class="recipe-button">ADD A RECIPE</button>
     </section>
     <section class="main-section">
-      <div>
-        <h1>What are you looking for?</h1>
+      <div id="form-box">
+        <h1>What are you looking for?<span class="required">*</span></h1>
         <form class="meal-form">
-          <input type="radio" id="sides" name="dish" value="sides">
+          <input type="radio" id="sides" name="dish" value="sides" onclick="activateCook()">
           <label for="side">Side</label><br>
-          <input type="radio" id="mains" name="dish" value="mains">
+          <input type="radio" id="mains" name="dish" value="mains" onclick="activateCook()">
           <label for="side">Main Dish</label><br>
-          <input type="radio" id="desserts" name="dish" value="desserts">
+          <input type="radio" id="desserts" name="dish" value="desserts" onclick="activateCook()">
           <label for="side">Dessert</label><br>
-          <input type="radio" id="entire-meal" name="dish" value="entire-meal">
+          <input type="radio" id="entire-meal" name="dish" value="entire-meal" onclick="activateCook()">
           <label for="side">Entire Meal</label><br>
           <button class="lets-cook-button">LET'S COOK!</button>
         </form>
       </div>
-      <div>
-        <img class="" id="pot" src="assets/cookpot.svg">
-        <p class ="hidden you-should-make">You should make:</p>
-        <h1 class="output"></h1>
+      <div id="display-box">
+        <div id="you-should-para">
+          <p class ="hidden you-should-make">You should make:</p>
+        </div>
+        <div id="meal-display">
+          <img class="" id="pot" src="assets/cookpot.svg">
+          <h1 class="output hidden"></h1>
+        </div>
+        <div id="clear-container">
+          <button class="clear hidden">CLEAR</button>
+        </div>
       </div>
     </section>
   </body>

@@ -7,6 +7,10 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+* {
+  border: solid black 1px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-image: url("assets/burger-friends.jpg");
@@ -33,15 +37,21 @@ body {
   font-size: 14px;
   padding: 10px;
   border: none;
-  border-radius: 5%;
 }
 
 .main-section {
   margin: 50px 0px;
+  height: 55%;
   display: flex;
   justify-content: space-around;
 }
 
+.clear {
+  color: white;
+  background-color: #95a5a6;
+  padding: 8px 12px;
+
+}
 /* div {
   border: solid black 1px;
   background-color: rgba(225, 225, 225, .9);
@@ -54,26 +64,52 @@ body {
   display: none;
 }
 
-div:nth-child(1) {
+#form-box {
   background-color: rgba(225, 225, 225, .9);
-  padding: 35px;
-  width: 430px;
-  height: 300px;
+  padding: 25px;
+  width: 32%;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 }
 
-div:nth-child(2) {
+#display-box {
   background-color: rgba(225, 225, 225, .9);
-  padding: 35px;
-  width: 430px;
-  height: 300px;
+  padding: 25px;
+  width: 32%;
+  display: grid;
+  grid-template-rows: 38% 42% 20%;
+}
+
+#you-should-para {
+display: flex;
+justify-content: center;
+align-items: flex-end;
+grid-row-start: 1;
+}
+
+#meal-display {
+  /* width: 100%;
+  height: 70%; */
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  grid-row-start: 2;
+}
+
+#clear-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  grid-row-start: 3;
+}
+
+.you-should-make {
+  font-weight: 700;
+  font-style: italic;
+  margin: 0px;
 }
 
 input {
@@ -85,7 +121,7 @@ input {
 }
 
 .lets-cook-button {
-  margin: 10px;
+  margin: 12px 5px;
   width: 38%;
   padding: 8px 40px;
   background-color: #0fb9b1;
@@ -93,19 +129,20 @@ input {
   font-size: 12px;
 }
 
-.you-should-make {
-  font-weight: 700;
-  font-style: italic;
-  margin: 5px;
-}
-
 .output {
-  font-size: 36px;
-  margin: 0px;
+  font-size: 32px;
+  margin: 5px;
   text-align: center;
 }
 
 #pot {
   height: 150px;
   width: 150px;
+}
+
+.required {
+  color: #ee5253;
+}
+button {
+  border-radius: 4px
 }
