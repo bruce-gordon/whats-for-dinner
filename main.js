@@ -76,9 +76,6 @@ function collectUserRecipe() {
       alert("Please enter a type: Side, Main Dish, or Dessert.")
     }
   clearInput();
-  console.log(meals.sides);
-  console.log(meals.mains);
-  console.log(meals.desserts);
 }
 
 function showForm() {

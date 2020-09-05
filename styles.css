@@ -5,11 +5,7 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
-/* * {
-  border: solid black 1px;
-} */
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -53,14 +49,6 @@ body {
   padding: 8px 12px;
 
 }
-/* div {
-  border: solid black 1px;
-  background-color: rgba(225, 225, 225, .9);
-  padding: 30px;
-  width: 430px;
-  height: 300px;
-  display: flex;
-} */
 
 #form-box {
   background-color: rgba(225, 225, 225, .9);
@@ -145,15 +133,6 @@ input {
 button {
   border-radius: 4px
 }
-
-/* .bottom-section {
-  padding: 8px 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  background-color: rgba(225, 225, 225, .9);
-  align-items: center;
-} */
 
 .add-recipe-form {
   margin: 0px;
