@@ -43,11 +43,44 @@ var letsCookButton = document.querySelector(".lets-cook-button");
 var cookPot = document.querySelector("#pot");
 var youShouldMake = document.querySelector(".you-should-make");
 var clearButton = document.querySelector(".clear");
+var addRecipeButton = document.querySelector(".add-recipe-button");
+var recipeForm = document.querySelector(".add-recipe-form");
+var addNew = document.querySelector(".add-new-button");
+var recipeType = document.querySelector("#recipe-type");
+var recipeName = document.querySelector("#recipe-name");
 letsCookButton.disabled = true;
 
 letsCookButton.addEventListener("click", displayMealIdea);
 
 clearButton.addEventListener("click", clearFoodIdea);
+
+addRecipeButton.addEventListener("click", showForm);
+
+addNew.addEventListener("click", collectUserRecipe);
+
+function clearInput() {
+  recipeType.value = '';
+  recipeName.value = '';
+}
+
+function collectUserRecipe() {
+  event.preventDefault();
+  var x = recipeType.value;
+  if (x === "Side" || x === "side") {
+    meals.sides.push(recipeName.value);
+    } else if (x === "Main Dish" || x === "Main dish" || x === "main dish") {
+      meals.mains.push(recipeName.value);
+    } else if (x === "Dessert" || x === "dessert") {
+      meals.desserts.push(recipeName.value);
+    } else {
+      alert("Please enter a type: Side, Main Dish, or Dessert.")
+    }
+  clearInput();
+}
+
+function showForm() {
+  recipeForm.classList.remove("hidden");
+}
 
 function activateCook() {
   letsCookButton.disabled = false;
