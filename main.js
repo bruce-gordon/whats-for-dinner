@@ -43,11 +43,20 @@ var letsCookButton = document.querySelector(".lets-cook-button");
 var cookPot = document.querySelector("#pot");
 var youShouldMake = document.querySelector(".you-should-make");
 var clearButton = document.querySelector(".clear");
+var addRecipeButton = document.querySelector(".add-recipe-button");
+var recipeForm = document.querySelector(".add-recipe-form");
+var addNew = document.querySelector(".add-new-button");
 letsCookButton.disabled = true;
 
 letsCookButton.addEventListener("click", displayMealIdea);
 
 clearButton.addEventListener("click", clearFoodIdea);
+
+addRecipeButton.addEventListener("click", showForm);
+
+function showForm() {
+  recipeForm.classList.remove("hidden");
+}
 
 function activateCook() {
   letsCookButton.disabled = false;
